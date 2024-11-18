@@ -1,3 +1,5 @@
+// tailwind.config.js
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
@@ -15,12 +17,11 @@ module.exports = {
             left: "42%",
             transform: "translateX(-50%) translateY(-50%)",
           },
-        },
-        moveCarSmall: {
-          "0%": { left: "-300px" },
-          "100%": {
-            left: "50%",
-            transform: "translateX(-50%) translateY(-50%)",
+          "@media (max-width: 1024px)": {
+            "100%": {
+              left: "70%",
+              transform: "translateX(-50%) translateY(-50%)",
+            },
           },
         },
         pulse: {

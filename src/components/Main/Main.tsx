@@ -13,7 +13,7 @@ const Main = () => {
   return (
     <>
       <div
-        className="mt-[17px] bg-cover bg-center h-[70vh] bg-fixed"
+        className="mt-[17px] bg-cover bg-center h-[70vh] lg:bg-fixed"
         style={{ backgroundImage: `url(${shippingImage})` }}
       ></div>
       <section id="services" className="px-[5vw] mt-[50px]">
@@ -35,7 +35,7 @@ const Main = () => {
           ))}
         </div>
       </section>
-      <section id="process" className="pr-4 md:pr-[5vw] mt-[30px] md:mt-[50px]">
+      <section id="process" className="md:pr-[5vw] mt-[30px] md:mt-[50px]">
         <h1 className="first-letter:text-general-text text-white text-2xl md:text-[40px] font-semibold text-center">
           Процес
         </h1>
@@ -52,7 +52,7 @@ const Main = () => {
                   key={index}
                   className="relative flex items-center space-x-4"
                 >
-                  <span className="bg-[#00FF91] w-3 h-3 md:w-4 md:h-4 rounded-full"></span>
+                  <span className="bg-[#00FF91] min-w-[16px] h-3 md:w-4 md:h-4 rounded-full"></span>
                   <span className="text-white text-base md:text-lg font-medium">
                     {step}
                   </span>
@@ -117,10 +117,10 @@ const Main = () => {
         </div>
       </section>
 
-      <div className="fixed bottom-10 right-5 focus:outline-none transform transition duration-100 ease-in-out animate-pulse hover:scale-400">
+      <div className="fixed bottom-10 right-5 focus:outline-none transform transition duration-100 ease-in-out animate-pulse hover:scale-400 z-20">
         <button
           onClick={() => navigate(`/${UIRoutes.FEEDBACK_FORM}`)}
-          className="px-[20px] py-[8px] bg-general-text"
+          className="px-[20px] py-[8px] bg-general-text "
         >
           Залишити заявку
         </button>
