@@ -31,7 +31,8 @@ module.exports = {
       },
       colors: {
         white: "#FFF",
-        "general-text": "#00FF91",
+        "general-text": "#00e680",
+        "general-lighter": "#00FF91",
       },
     },
   },

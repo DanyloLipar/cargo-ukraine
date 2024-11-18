@@ -26,11 +26,11 @@ const Main = () => {
               key={index}
               className="bg-[#FFF] shadow-lg rounded-lg p-6 flex flex-col transition-transform transform hover:scale-105 group cursor-pointer"
             >
-              <h3 className="text-2xl font-semibold text-[#00FF91] mb-4 group-hover:text-[#00e680]">
+              <h3 className="text-2xl font-semibold text-general-text mb-4 group-hover:text-general-lighter">
                 {service.title}
               </h3>
               <p className="text-gray-700 mb-6 ">{service.description}</p>
-              <div className="bg-[#00FF91] text-white py-2 px-4 rounded group-hover:bg-[#00e680] mt-auto"></div>
+              <div className="bg-general-text py-2 px-4 rounded group-hover:bg-general-lighter mt-auto"></div>
             </div>
           ))}
         </div>
@@ -43,7 +43,7 @@ const Main = () => {
           <CarAnimation />
           <div className="relative my-8 md:my-[40px] w-full md:w-auto">
             <div
-              className="absolute left-4 top-0 h-full border-l-2 border-[#00FF91] hidden md:block"
+              className="absolute left-4 top-0 h-full border-l-2 border-general-text hidden md:block"
               aria-hidden="true"
             ></div>
             <ul className="space-y-4 md:space-y-8 pl-6 md:pl-12">
@@ -52,7 +52,7 @@ const Main = () => {
                   key={index}
                   className="relative flex items-center space-x-4"
                 >
-                  <span className="bg-[#00FF91] min-w-[16px] h-3 md:w-4 md:h-4 rounded-full"></span>
+                  <span className="bg-general-text min-w-[16px] h-3 md:w-4 md:h-4 rounded-full"></span>
                   <span className="text-white text-base md:text-lg font-medium">
                     {step}
                   </span>
@@ -65,7 +65,9 @@ const Main = () => {
       <section id="about" className="bg-gray-50 py-16 px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-4xl font-bold text-[#00FF91] mb-4">Про нас</h2>
+            <h2 className="text-4xl font-bold text-general-text mb-4">
+              Про нас
+            </h2>
             <p className="text-gray-700 mb-4">
               Наша компанія спеціалізується на доставці та продажі автомобілів
               із США, Канади, Кореї та Європи, допомагаючи купити бажане авто
@@ -78,7 +80,7 @@ const Main = () => {
               задоволеним, отримавши автомобіль, який відповідає всім його
               очікуванням.
             </p>
-            <button className="bg-[#00FF91] text-white py-2 px-6 rounded hover:bg-[#00e680] transition">
+            <button className="bg-general-text text-white py-2 px-6 rounded hover:bg-general-lighter transition">
               Дізнатися більше
             </button>
           </div>
@@ -100,7 +102,7 @@ const Main = () => {
           {auctions.map((auction, index) => (
             <div
               key={index}
-              className="bg-[#FFF] border border-[#00FF91] rounded-lg shadow-lg p-6 flex flex-col items-center"
+              className="bg-white border border-general-text rounded-lg shadow-lg p-6 flex flex-col items-center"
             >
               <img
                 src={auction.logo}
@@ -109,7 +111,7 @@ const Main = () => {
                   index === 2 ? "w-[45px]" : "w-20"
                 } h-24 object-contain mb-4`}
               />
-              <h3 className="text-xl font-semibold text-[#00FF91] text-center">
+              <h3 className="text-xl font-semibold text-general-text text-center">
                 {auction.name}
               </h3>
             </div>
@@ -120,7 +122,7 @@ const Main = () => {
       <div className="fixed bottom-10 right-5 focus:outline-none transform transition duration-100 ease-in-out animate-pulse hover:scale-400 z-20">
         <button
           onClick={() => navigate(`/${UIRoutes.FEEDBACK_FORM}`)}
-          className="px-[20px] py-[8px] bg-general-text "
+          className="px-[20px] py-[8px] bg-general-text hover:bg-general-lighter transition ease-in-out duration-300"
         >
           Залишити заявку
         </button>

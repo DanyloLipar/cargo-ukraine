@@ -22,9 +22,9 @@ const VerifyCode = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-[#00FF91] p-4">
+    <div className="flex items-center justify-center min-h-screen bg-general-text p-4">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-        <h2 className="text-2xl font-bold text-center text-[#00FF91] mb-6">
+        <h2 className="text-2xl font-bold text-center text-general-text mb-6">
           Підтвердження телефону
         </h2>
         <p className="text-center mb-4">
@@ -51,7 +51,7 @@ const VerifyCode = () => {
 
               <button
                 type="submit"
-                className="w-full bg-[#00FF91] text-white py-2 rounded-lg"
+                className="w-full bg-general-text text-white py-2 rounded-lg hover:bg-general-lighter"
               >
                 Підтвердити
               </button>

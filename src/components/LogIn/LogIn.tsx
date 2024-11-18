@@ -23,9 +23,9 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-[#00FF91] p-4">
+    <div className="flex items-center justify-center min-h-screen bg-general-text p-4">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-        <h2 className="text-2xl font-bold text-center text-[#00FF91] mb-6">
+        <h2 className="text-2xl font-bold text-center text-general-text mb-6">
           Увійдіть
         </h2>
 
@@ -69,7 +69,7 @@ const Login = () => {
                 <div className="w-[100%] flex justify-end">
                   <Link
                     to={`/${UIRoutes.AUTH}/${ChildRoutes.FORGOT_PASSWORD}`}
-                    className="hover:text-[#00FF91] text-[14px] mt-[3px]"
+                    className="hover:text-general-text text-[14px] mt-[3px]"
                   >
                     Забули пароль?
                   </Link>
@@ -84,13 +84,13 @@ const Login = () => {
               <div className="flex flex-col justify-center">
                 <button
                   type="submit"
-                  className="w-full bg-[#00FF91] text-white font-bold py-2 rounded-lg hover:bg-[#00e680] transition duration-300 w-[100%]"
+                  className="w-full bg-general-text text-white font-bold py-2 rounded-lg hover:bg-general-lighter transition duration-300 w-[100%]"
                 >
                   Увійти
                 </button>
                 <Link
                   to={`/${UIRoutes.AUTH}/${ChildRoutes.SIGNUP}`}
-                  className="hover:text-[#00FF91] text-center text-[14px] mt-[15px]"
+                  className="hover:text-general-text text-center text-[14px] mt-[15px]"
                 >
                   Ще не маєте акаунту? Зареєструйтесь
                 </Link>
