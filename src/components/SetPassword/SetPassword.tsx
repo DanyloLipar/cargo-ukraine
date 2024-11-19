@@ -29,7 +29,7 @@ const SetPassword = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-general-text p-4 sm:p-8">
       <div className="bg-white p-6 sm:p-8 rounded-lg shadow-lg w-full max-w-md">
-        <h2 className="text-2xl sm:text-3xl font-bold text-center text-general-text mb-4 sm:mb-6">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center text-general-text mb-4 sm:mb-6 font-poppins">
           Встановіть новий пароль
         </h2>
 
@@ -41,11 +41,13 @@ const SetPassword = () => {
           {({ errors, touched }) => (
             <Form>
               <div className="mb-3 sm:mb-4">
-                <label className="block text-gray-700">Новий пароль</label>
+                <label className="block text-gray-700 font-poppins">
+                  Новий пароль
+                </label>
                 <Field
                   name="password"
                   type="password"
-                  className={`w-full px-4 py-2 border-b-2 ${
+                  className={`font-roboto w-full px-4 py-2 border-b-2 ${
                     errors.password && touched.password
                       ? "border-red-500"
                       : "border-gray-300"
@@ -54,18 +56,18 @@ const SetPassword = () => {
                 <ErrorMessage
                   name="password"
                   component="div"
-                  className="text-red-500 text-sm mt-1"
+                  className="text-red-500 text-sm mt-1 font-roboto"
                 />
               </div>
 
               <div className="mb-3 sm:mb-4">
-                <label className="block text-gray-700">
+                <label className="block text-gray-700 font-poppins">
                   Підтвердження пароля
                 </label>
                 <Field
                   name="confirmPassword"
                   type="password"
-                  className={`w-full px-4 py-2 border-b-2 ${
+                  className={`font-roboto w-full px-4 py-2 border-b-2 ${
                     errors.confirmPassword && touched.confirmPassword
                       ? "border-red-500"
                       : "border-gray-300"
@@ -74,13 +76,13 @@ const SetPassword = () => {
                 <ErrorMessage
                   name="confirmPassword"
                   component="div"
-                  className="text-red-500 text-sm mt-1"
+                  className="text-red-500 text-sm mt-1 font-roboto"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-general-text text-white font-bold py-2 rounded-lg hover:bg-general-lighter transition duration-300"
+                className="w-full bg-general-text text-white font-bold py-2 rounded-lg hover:bg-general-lighter transition duration-300 font-roboto"
               >
                 Встановити пароль
               </button>

@@ -46,7 +46,7 @@ const SignUp = () => {
       {!sent ? (
         <div className="flex items-center justify-center min-h-screen bg-general-text p-4">
           <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-            <h2 className="text-2xl font-bold text-center text-general-text mb-6">
+            <h2 className="text-2xl font-bold text-center text-general-text mb-6 font-poppins">
               Реєстрація
             </h2>
 
@@ -65,10 +65,12 @@ const SignUp = () => {
               {({ errors, touched }) => (
                 <Form>
                   <div className="mb-4">
-                    <label className="block text-gray-700">Ім'я</label>
+                    <label className="block text-gray-700 font-poppins">
+                      Ім'я
+                    </label>
                     <Field
                       name="firstName"
-                      className={`w-full px-4 py-2 border-b-2 ${
+                      className={`font-roboto w-full px-4 py-2 border-b-2 ${
                         errors.firstName && touched.firstName
                           ? "border-red-500"
                           : "border-gray-300"
@@ -77,15 +79,17 @@ const SignUp = () => {
                     <ErrorMessage
                       name="firstName"
                       component="div"
-                      className="text-red-500 text-sm mt-1"
+                      className="text-red-500 text-sm mt-1 font-roboto"
                     />
                   </div>
 
                   <div className="mb-4">
-                    <label className="block text-gray-700">Прізвище</label>
+                    <label className="block text-gray-700 font-poppins">
+                      Прізвище
+                    </label>
                     <Field
                       name="lastName"
-                      className={`w-full px-4 py-2 border-b-2 ${
+                      className={`font-roboto w-full px-4 py-2 border-b-2 ${
                         errors.lastName && touched.lastName
                           ? "border-red-500"
                           : "border-gray-300"
@@ -94,16 +98,18 @@ const SignUp = () => {
                     <ErrorMessage
                       name="lastName"
                       component="div"
-                      className="text-red-500 text-sm mt-1"
+                      className="text-red-500 text-sm mt-1 font-roboto"
                     />
                   </div>
 
                   <div className="mb-4">
-                    <label className="block text-gray-700">Email</label>
+                    <label className="block text-gray-700 font-poppins">
+                      Email
+                    </label>
                     <Field
                       name="email"
                       type="email"
-                      className={`w-full px-4 py-2 border-b-2 ${
+                      className={`font-roboto w-full px-4 py-2 border-b-2 ${
                         errors.email && touched.email
                           ? "border-red-500"
                           : "border-gray-300"
@@ -112,22 +118,22 @@ const SignUp = () => {
                     <ErrorMessage
                       name="email"
                       component="div"
-                      className="text-red-500 text-sm mt-1"
+                      className="text-red-500 text-sm mt-1 font-roboto"
                     />
                   </div>
 
                   <div className="mb-4">
-                    <label className="block text-gray-700">
+                    <label className="block text-gray-700 font-poppins">
                       Номер телефону
                     </label>
                     <div className="flex items-center">
-                      <span className="bg-gray-200 px-3 py-2 rounded-l">
+                      <span className="bg-gray-200 px-3 py-2 rounded-l font-roboto">
                         +380
                       </span>
                       <Field
                         name="phone"
                         type="text"
-                        className={`w-full px-4 py-2 border-b-2 rounded-r ${
+                        className={`font-roboto font-roboto w-full px-4 py-2 border-b-2 rounded-r ${
                           errors.phone && touched.phone
                             ? "border-red-500"
                             : "border-gray-300"
@@ -138,16 +144,18 @@ const SignUp = () => {
                     <ErrorMessage
                       name="phone"
                       component="div"
-                      className="text-red-500 text-sm mt-1"
+                      className="text-red-500 text-sm mt-1 font-roboto"
                     />
                   </div>
 
                   <div className="mb-4">
-                    <label className="block text-gray-700">Пароль</label>
+                    <label className="block text-gray-700 font-poppins">
+                      Пароль
+                    </label>
                     <Field
                       name="password"
                       type="password"
-                      className={`w-full px-4 py-2 border-b-2 ${
+                      className={`font-roboto w-full px-4 py-2 border-b-2 ${
                         errors.password && touched.password
                           ? "border-red-500"
                           : "border-gray-300"
@@ -156,18 +164,18 @@ const SignUp = () => {
                     <ErrorMessage
                       name="password"
                       component="div"
-                      className="text-red-500 text-sm mt-1"
+                      className="text-red-500 text-sm mt-1 font-roboto"
                     />
                   </div>
 
                   <div className="mb-6">
-                    <label className="block text-gray-700">
+                    <label className="block text-gray-700 font-poppins">
                       Підтвердження пароля
                     </label>
                     <Field
                       name="confirmPassword"
                       type="password"
-                      className={`w-full px-4 py-2 border-b-2 ${
+                      className={`font-roboto w-full px-4 py-2 border-b-2 ${
                         errors.confirmPassword && touched.confirmPassword
                           ? "border-red-500"
                           : "border-gray-300"
@@ -176,20 +184,20 @@ const SignUp = () => {
                     <ErrorMessage
                       name="confirmPassword"
                       component="div"
-                      className="text-red-500 text-sm mt-1"
+                      className="text-red-500 text-sm mt-1 font-roboto"
                     />
                   </div>
 
                   <div className="flex flex-col justify-center">
                     <button
                       type="submit"
-                      className="w-full bg-general-text text-white font-bold py-2 rounded-lg hover:bg-general-lighter transition duration-300"
+                      className="w-full bg-general-text text-white font-bold py-2 rounded-lg hover:bg-general-lighter transition duration-300 font-roboto"
                     >
                       Зареєструватися
                     </button>
                     <Link
                       to={`/${UIRoutes.AUTH}/${ChildRoutes.LOGIN}`}
-                      className="hover:text-general-text text-center text-[14px] mt-[15px]"
+                      className="hover:text-general-text text-center text-[14px] mt-[15px] font-roboto"
                     >
                       Вже маєте акаунт? Увійдіть
                     </Link>

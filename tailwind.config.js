@@ -10,6 +10,10 @@ module.exports = {
         "line-draw": "lineDraw 5s ease-in-out forwards",
         pulse: "pulse 2s infinite",
       },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
+      },
       keyframes: {
         moveCar: {
           "0%": { left: "-300px" },

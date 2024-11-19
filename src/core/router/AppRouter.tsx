@@ -3,7 +3,7 @@ import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import LoadingPage from "../../components/LoadingPage";
 import PrivateLayout from "../../layouts/PrivateLayout";
 import PublicLayout from "../../layouts/PublicLayout";
-import { ScrollTop } from "../../ScrollToTop";
+import ScrollTop from "../../ScrollTop";
 
 import { ChildRoutes, IRoute, UIRoutes } from "../types/RouterTypes";
 
@@ -50,7 +50,7 @@ const AppRouter: FC = () => {
     }, 1500);
 
     return () => clearTimeout(timer);
-  }, [location]);
+  }, [location.pathname]);
 
   return (
     <ScrollTop>

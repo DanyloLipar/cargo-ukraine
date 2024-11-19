@@ -1,26 +1,16 @@
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { ChildRoutes, UIRoutes } from "../../core/types/RouterTypes";
 import { useState } from "react";
+import { useScrollToSection } from "../../core/functions/useScrollToSection";
 
 const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const scrollToSection = (sectionId: string) => {
-    if (location.pathname !== UIRoutes.HOME) {
-      navigate(UIRoutes.HOME);
-    }
-    setTimeout(() => {
-      const section = document.getElementById(sectionId);
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
-      }
-    }, 100);
-  };
+  const scrollToSection = useScrollToSection();
 
   return (
-    <div className="flex flex-wrap items-center justify-between py-4 px-5 lg:px-[5vw]">
+    <div className="flex flex-wrap items-center justify-between pt-8 pb-5 px-5 lg:px-[5vw]">
       <Link
         to={`${UIRoutes.HOME}`}
         className="text-general-text font-semibold text-2xl sm:text-3xl lg:text-[40px] cursor-pointer"
@@ -43,7 +33,7 @@ const Header = () => {
       >
         <nav className="w-full lg:w-auto flex flex-col lg:flex-row items-center gap-5 lg:gap-[20px]">
           <ul className="flex flex-col lg:flex-row items-center gap-5 lg:gap-[20px] w-full lg:w-auto">
-            <li className="text-white text-lg lg:text-[22px] hover:text-general-text cursor-pointer">
+            <li className="text-white text-lg lg:text-[22px] hover:text-general-text cursor-pointer font-poppins">
               <span
                 onClick={() => {
                   scrollToSection("services");
@@ -53,7 +43,7 @@ const Header = () => {
                 Послуги
               </span>
             </li>
-            <li className="text-white text-lg lg:text-[22px] hover:text-general-text cursor-pointer">
+            <li className="text-white text-lg lg:text-[22px] hover:text-general-text cursor-pointer font-poppins">
               <span
                 onClick={() => {
                   scrollToSection("process");
@@ -63,7 +53,7 @@ const Header = () => {
                 Процес
               </span>
             </li>
-            <li className="text-white text-lg lg:text-[22px] hover:text-general-text cursor-pointer">
+            <li className="text-white text-lg lg:text-[22px] hover:text-general-text cursor-pointer font-poppins">
               <span
                 onClick={() => {
                   scrollToSection("about");
@@ -73,7 +63,7 @@ const Header = () => {
                 Про нас
               </span>
             </li>
-            <li className="text-white text-lg lg:text-[22px] hover:text-general-text cursor-pointer">
+            <li className="text-white text-lg lg:text-[22px] hover:text-general-text cursor-pointer font-poppins">
               <span
                 onClick={() => {
                   scrollToSection("contacts");
@@ -92,7 +82,7 @@ const Header = () => {
               navigate(`/${UIRoutes.AUTH}/${ChildRoutes.LOGIN}`);
               setMenuOpen(false);
             }}
-            className="border-[2px] border-white text-white text-base lg:text-[20px] py-[4px] px-[15px] hover:text-general-text hover:border-general-text transition duration-700 ease-in-out mx-auto lg:ml-[20px]"
+            className="border-[2px] border-white text-white text-base lg:text-[20px] py-[4px] px-[15px] hover:text-general-text hover:border-general-text transition duration-700 ease-in-out mx-auto lg:ml-[20px] font-poppins"
           >
             Увійти
           </button>

@@ -9,3 +9,5 @@ export const ScrollTop = (props: any) => {
 
   return <>{props.children}</>;
 };
+
+export default ScrollTop;

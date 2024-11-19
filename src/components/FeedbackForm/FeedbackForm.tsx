@@ -51,7 +51,7 @@ const FeedbackForm = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-2xl">
-        <h2 className="text-2xl font-bold text-center mb-6">
+        <h2 className="text-2xl font-bold text-center mb-6 font-poppins">
           Форма зворотного зв'язку
         </h2>
 
@@ -66,50 +66,52 @@ const FeedbackForm = () => {
                 <Field
                   name="name"
                   placeholder="Ім'я"
-                  className="p-2 border rounded-md"
+                  className="p-2 border rounded-md font-roboto"
                 />
                 <ErrorMessage
                   name="name"
                   component="div"
-                  className="text-red-500 text-sm"
+                  className="text-red-500 text-sm font-roboto"
                 />
 
                 <Field
                   name="surname"
                   placeholder="Прізвище"
-                  className="p-2 border rounded-md"
+                  className="p-2 border rounded-md font-roboto"
                 />
                 <ErrorMessage
                   name="surname"
                   component="div"
-                  className="text-red-500 text-sm"
+                  className="text-red-500 text-sm font-roboto"
                 />
 
                 <Field
                   name="phone"
                   placeholder="Телефон (без +380)"
-                  className="p-2 border rounded-md"
+                  className="p-2 border rounded-md font-roboto"
                 />
                 <ErrorMessage
                   name="phone"
                   component="div"
-                  className="text-red-500 text-sm"
+                  className="text-red-500 text-sm font-roboto"
                 />
 
                 <Field
                   name="email"
                   type="email"
                   placeholder="Email"
-                  className="p-2 border rounded-md"
+                  className="p-2 border rounded-md font-roboto"
                 />
                 <ErrorMessage
                   name="email"
                   component="div"
-                  className="text-red-500 text-sm"
+                  className="text-red-500 text-sm font-roboto"
                 />
               </div>
 
-              <h3 className="text-xl font-semibold mb-4">Додати бажане авто</h3>
+              <h3 className="text-xl font-semibold mb-4 font-poppins">
+                Додати бажане авто
+              </h3>
 
               <FieldArray name="cars">
                 {({ push, remove }) => (
@@ -120,23 +122,23 @@ const FeedbackForm = () => {
                           <Field
                             name={`cars[${index}].make`}
                             placeholder="Виробник авто"
-                            className="w-1/2 p-2 border rounded-md"
+                            className="w-1/2 p-2 border rounded-md font-roboto"
                           />
                           <ErrorMessage
                             name={`cars[${index}].make`}
                             component="div"
-                            className="text-red-500 text-sm"
+                            className="text-red-500 text-sm font-roboto"
                           />
 
                           <Field
                             name={`cars[${index}].model`}
                             placeholder="Модель авто"
-                            className="w-1/2 p-2 border rounded-md"
+                            className="w-1/2 p-2 border rounded-md font-roboto"
                           />
                           <ErrorMessage
                             name={`cars[${index}].model`}
                             component="div"
-                            className="text-red-500 text-sm"
+                            className="text-red-500 text-sm font-roboto"
                           />
                         </div>
 
@@ -144,7 +146,7 @@ const FeedbackForm = () => {
                           <Field
                             as="select"
                             name={`cars[${index}].bodyType`}
-                            className="w-1/2 p-2 border rounded-md"
+                            className="w-1/2 p-2 border rounded-md font-roboto"
                           >
                             <option value="">Тип кузова</option>
                             <option value="sedan">Седан</option>
@@ -154,13 +156,13 @@ const FeedbackForm = () => {
                           <ErrorMessage
                             name={`cars[${index}].bodyType`}
                             component="div"
-                            className="text-red-500 text-sm"
+                            className="text-red-500 text-sm font-roboto"
                           />
 
                           <Field
                             as="select"
                             name={`cars[${index}].fuelType`}
-                            className="w-1/2 p-2 border rounded-md"
+                            className="w-1/2 p-2 border rounded-md font-roboto"
                           >
                             <option value="">Тип палива</option>
                             <option value="gasoline">Бензин</option>
@@ -170,7 +172,7 @@ const FeedbackForm = () => {
                           <ErrorMessage
                             name={`cars[${index}].fuelType`}
                             component="div"
-                            className="text-red-500 text-sm"
+                            className="text-red-500 text-sm font-roboto"
                           />
                         </div>
 
@@ -179,19 +181,19 @@ const FeedbackForm = () => {
                             name={`cars[${index}].year`}
                             placeholder="Рік"
                             type="number"
-                            className="w-1/2 p-2 border rounded-md"
+                            className="w-1/2 p-2 border rounded-md font-roboto"
                           />
                           <ErrorMessage
                             name={`cars[${index}].year`}
                             component="div"
-                            className="text-red-500 text-sm"
+                            className="text-red-500 text-sm font-roboto"
                           />
 
                           {values.cars.length > 1 && (
                             <button
                               type="button"
                               onClick={() => remove(index)}
-                              className="text-red-500 mt-2"
+                              className="text-red-500 mt-2 font-roboto"
                             >
                               Видалити авто
                             </button>
@@ -211,7 +213,7 @@ const FeedbackForm = () => {
                           year: "",
                         })
                       }
-                      className="w-full bg-[#00FF91] text-white py-2 rounded-lg mt-4"
+                      className="w-full bg-[#00FF91] text-white py-2 rounded-lg mt-4 font-roboto"
                     >
                       Додати авто
                     </button>
@@ -221,7 +223,7 @@ const FeedbackForm = () => {
 
               <button
                 type="submit"
-                className="w-full mt-6 bg-[#00FF91] text-white py-2 rounded-lg"
+                className="w-full mt-6 bg-[#00FF91] text-white py-2 rounded-lg font-roboto"
               >
                 Відправити
               </button>
